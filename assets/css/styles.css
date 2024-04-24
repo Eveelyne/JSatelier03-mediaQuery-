@@ -1,0 +1,74 @@
+:root {
+    --color-secondary: #C06E52;
+    --color-primary: #FBF2C0;
+    --color-gray: #48392A;
+}
+
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 1rem;
+    font: 16px;
+    background-color: rgb(207, 207, 207);
+    display: flex;
+    justify-content: center;
+
+}
+
+#icon {
+    width: 100px;
+}
+
+.text__icon {
+    width: 100px;
+}
+
+button {
+    width: 100px;
+    height: 50px;
+    font-weight: bold;
+    border-radius: 2rem;
+    border: none;
+}
+
+button:hover {
+    background-color: pink;
+    cursor: pointer;
+}
+
+.container__carres {
+    display: flex;
+    justify-content: center;
+    flex-flow: column wrap;
+    gap: 1rem;
+    width: 500px;
+}
+
+.carre__rouge {
+    background-color: red;
+    width: 100px;
+    height: 100px;
+}
+
+.hidden {
+    display: none;
+}
+
+footer {
+    min-height: 15rem;
+    background-color: var();
+    color: white;
+}
+
+::selection {
+    background-color: black;
+    color: #ffffff;
+}
+
+.button {
+    cursor: pointer;
+}
+
+@media screen and (min-width: 1024px)  {
+    
+}

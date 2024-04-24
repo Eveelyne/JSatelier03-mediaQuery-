@@ -1,6 +1,8 @@
 const icon = document.querySelector('#icon');
 const button = document.querySelector('#button');
 const textIcon = document.querySelector('.text__icon');
+const carreRouge = document.querySelector('.carre__rouge');
+const carresRouges = document.querySelectorAll('.carre__rouge');
 
 
 /**
@@ -62,7 +64,28 @@ showIcon(mediaQueryList640px);
 mediaQueryList640px.addEventListener('change', () => {showIcon(mediaQueryList640px)});
 
 
+/**
+ * @description Fonction pour faire apparaître les autres carrés rouges.
+ * @param {MediaQueryList} mediaQueryList 
+ */
 
+function showCarresRouges(mediaQueryList) {
+    if (mediaQueryList.matches) {
+        for(let carreRouge of carresRouges) {
+            carreRouge.classList.remove('hidden');
+        } 
+    } else {
+        for(let i = 3; i <= 7; i++) {
+            carresRouges[i].classList.add('hidden');
+        }
+    }
+}
+
+const mediaQueryListMax1024px = window.matchMedia('(min-width: 1024px)');
+
+showCarresRouges(mediaQueryListMax1024px);
+
+mediaQueryListMax1024px.addEventListener('change', () => {showCarresRouges(mediaQueryListMax1024px)});
 
 
 
@@ -88,4 +111,3 @@ const mediaQueryList = window.matchMedia('(min-width: 700px)');
 switchBackgroundColor(mediaQueryList);
 
 mediaQueryList.addEventListener('change', () => {switchBackgroundColor(mediaQueryList)}); */
-
